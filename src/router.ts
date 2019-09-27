@@ -10,13 +10,15 @@ let router = new Router({
   routes: [
     {
       path: "/",
-      redirect: "/index/discovery"
+      redirect: "/home/discovery"
     },
     {
-      path: "/index",
-      name: "index",
+      path: "/home",
+      name: "home",
       component: () =>
-        import(/* webpackChunkName: "layoutIndex" */ "./layouts/index.vue"),
+        import(
+          /* webpackChunkName: "homeIndex" */ "./layouts/home-layout/index.vue"
+        ),
       children: [
         {
           path: "discovery",
@@ -27,6 +29,12 @@ let router = new Router({
             )
         }
       ]
+    },
+    {
+      path: "/test",
+      name: "Test",
+      component: () =>
+        import(/* webpackChunkName: "Test" */ "./views/test/index.vue")
     }
   ]
 });
