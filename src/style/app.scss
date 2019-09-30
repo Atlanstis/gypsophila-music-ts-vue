@@ -1,0 +1,22 @@
+/**
+ ** 应用级别的一些样式
+ **/
+// ::selection {
+//   background-color: $theme-color;
+//   color: white;
+// }
+
+// 滚动条
+::-webkit-scrollbar-track {
+  background-color: #ededed;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d0d0d0;
+}

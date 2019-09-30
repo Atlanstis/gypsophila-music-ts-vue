@@ -12,5 +12,14 @@ module.exports = {
       },
       port: 8888
     }
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `
+          @import "~@/style/mixin.scss";
+        `
+      }
+    }
   }
 };

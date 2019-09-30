@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import NProgress from "nprogress";
+import "nprogress/nprogress.css";
 
 Vue.use(Router);
 
@@ -27,14 +28,36 @@ let router = new Router({
             import(
               /* webpackChunkName: "discovery" */ "./views/discovery/index.vue"
             )
+        },
+        {
+          path: "playlists",
+          name: "playlists",
+          component: () =>
+            import(
+              /* webpackChunkName: "discovery" */ "./views/playlists/index.vue"
+            )
+        },
+        {
+          path: "songs",
+          name: "songs",
+          component: () =>
+            import(/* webpackChunkName: "songs" */ "./views/songs/index.vue")
+        },
+        {
+          path: "mvs",
+          name: "mvs",
+          component: () =>
+            import(/* webpackChunkName: "mvs" */ "./views/mvs/index.vue")
+        },
+        {
+          path: "playlist/:id",
+          name: "playlist",
+          component: () =>
+            import(
+              /* webpackChunkName: "playlist" */ "./views/playlist/index.vue"
+            )
         }
       ]
-    },
-    {
-      path: "/test",
-      name: "Test",
-      component: () =>
-        import(/* webpackChunkName: "Test" */ "./views/test/index.vue")
     }
   ]
 });

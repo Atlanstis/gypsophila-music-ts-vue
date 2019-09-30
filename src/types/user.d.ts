@@ -11,11 +11,13 @@ export interface PlayListInfo {
 }
 
 export interface PlayListMenu {
-  title: String;
+  title?: String;
   type: "root" | "playlist";
   children: PlayListInfo[];
 }
 
 export interface UserInfo {
-  id: number;
+  id?: number;
+  avatarUrl?: String;
+  nickname?: String;
 }

@@ -6,11 +6,16 @@
 
 <script>
 import { Vue, Component } from "vue-property-decorator";
+import { UserModule } from "@/store/modules/user";
 
 @Component({
   name: "app"
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  created() {
+    UserModule.Login();
+  }
+}
 </script>
 
 <style>

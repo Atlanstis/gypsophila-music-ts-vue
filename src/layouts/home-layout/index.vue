@@ -1,8 +1,10 @@
 <template>
   <gy-container class="home-layout">
-    <gy-header>Header</gy-header>
+    <gy-header height="50px">Header</gy-header>
     <gy-container>
-      <gy-aside width="200px">Aside</gy-aside>
+      <gy-aside width="250px">
+        <aside-menu />
+      </gy-aside>
       <gy-container>
         <gy-main>
           <router-view></router-view>
@@ -20,6 +22,7 @@ import GyHeader from "@/components/container/header.vue";
 import GyMain from "@/components/container/main.vue";
 import GyFooter from "@/components/container/footer.vue";
 import GyAside from "@/components/container/aside.vue";
+import AsideMenu from "@/components/aside-menu/index.vue";
 
 @Component({
   name: "home-layout",
@@ -28,7 +31,8 @@ import GyAside from "@/components/container/aside.vue";
     GyHeader,
     GyMain,
     GyFooter,
-    GyAside
+    GyAside,
+    AsideMenu
   }
 })
 export default class HomeLayout extends Vue {}
